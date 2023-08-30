@@ -1,0 +1,3 @@
+# Kamata 
+## Attendance system
+Kamata, a management dashboard of sorts, aims to automate the tedious and time consuming process of traitional class attendance systems. The user friendly app proposes a web based central system that hosts the student, intructors and super administrator. We aim to automate and speed up the process  of attendance management in the education institution of all parties involved, student as well as the lectures(intstructors) by ensuring efficiency, accuracy, security and transparency of data handled by the app. The easy to maintain app will be a third party and will employ a widespread of technologies to achieve its agenda. Later on we look forward to intergrating it to school system. 
