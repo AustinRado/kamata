@@ -1,12 +1,14 @@
-import Home from './pages/Home'
-import './App.css'
+import './App.css';
+import Navbar from './components/Navbar'
+import SignIn from './pages/SignIn';
 
-function App() {
 
+function App(){
   return (
     <>
-    <Home/>
-    </>
+    <Navbar />
+    <SignIn />
+    </> 
   )
 }
 
