@@ -1,6 +1,7 @@
 import Logo from '../assets/logo-head.png';
 import { useState } from "react";
 import {AiFillEyeInvisible, AiFillEye} from "react-icons/ai";
+import axios from 'axios';
 
 export default function SignIn() {
     const [showPassword, setShowPassword] = useState(false);
@@ -18,6 +19,17 @@ export default function SignIn() {
         setFormData((prevState)=>({...prevState, [e.target.id]: e.target.value}));
     }
 
+    //@desc Handles the form submission by making a POST request to the login endpoint.
+    //@param {Event} event - The event object representing the form submission.
+    //returns {void}
+
+    const handleSubmit = (event) => {
+        event.preventDefault();
+        axios.post('http://localhost:8081/login', formData)
+        .then(res => console.log(res))
+        .catch(err => console.log(err));
+    };
+
   return (
     <section className="bg-gray-50 dark:bg-gray-900">
   <div className="flex flex-col items-center justify-center px-6 py-8 mx-auto md:h-screen lg:py-0">
@@ -30,7 +42,7 @@ export default function SignIn() {
               <h1 className="text-xl font-bold leading-tight tracking-tight text-gray-900 md:text-2xl dark:text-white">
                   Sign in
               </h1>
-              <form className="space-y-4 md:space-y-6" action="#">
+              <form onSubmit={handleSubmit} className="space-y-4 md:space-y-6" action="#">
                   <div>
                       
                       <input 
