@@ -1,4 +1,4 @@
-# KAMATA Documentation
+# ![logo](image.png) KAMATA Documentation
 # Web based qr-code attendance system
 
 ## Introduction
